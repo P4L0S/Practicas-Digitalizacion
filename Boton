@@ -1,1 +1,29 @@
+void main(){
+  animate(ejecutar);
+}
 
+void ejecutar(){
+  imagen();
+  control();
+  }
+
+void imagen(){
+  image("https://static.vecteezy.com/system/resources/previews/003/498/690/non_2x/wood-texture-background-wood-planks-or-wood-wall-free-photo.jpg",0,0,400,400);
+    rect(120,120,80,80);
+    
+}
+
+
+void control(){	
+  println("x: " + mouseX);
+  println("y: " + mouseY);
+  if (mousePressed)
+    if(mouseX>120 && mouseX <200)
+    if(mouseY>120 && mouseY<200)
+    if(mousePressed){
+      if(mouseButton ==LEFTBUTTON){
+        image("https://shawellness.com/shamagazine/wp-content/uploads/2018/07/POST-09-2018--724x450.jpg",0,0,350,325);
+        rect(120,120,80,80);
+        }
+  }
+}
