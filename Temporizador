@@ -1,0 +1,32 @@
+int
+int
+
+void main(){
+println (second());
+text("TEMPORIZADOR",90,50);
+  reloj();
+  temporizador();
+}
+
+void reloj(){
+  println(second(5));
+}
+
+void nombre(){
+  text(TEMPORIZADOR,160,160);
+}
+void temporizador(){
+  if ((second)>0) second -1
+}
+
+void aleatorio(){
+  
+  double aleatorio;
+	aleatorio = random();
+	println(aleatorio);
+	aleatorio = random(background(223,41,41));
+	println(aleatorio);
+	aleatorio = random(background(233,31,31));
+	println(aleatorio);
+  
+}
