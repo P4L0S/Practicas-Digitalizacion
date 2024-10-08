@@ -1,1 +1,41 @@
+int x=120;
+int y=120;
 
+void ejecutar(){
+  player();
+  controles();
+}
+
+void main(){
+  animate(ejecutar);
+}
+  
+  
+  
+void player(){
+  image("https://i.blogs.es/cc8912/screenshot_1764/450_1000.webp",0,0,400,400);
+  image("https://seeklogo.com/images/Z/Zelda-logo-687714F8A8-seeklogo.com.png",x,y,150,150);
+}
+
+void controles(){
+  if(keyPressed && key=="up"){
+    println("Opa");
+    y = y -10;}
+    if(keyPressed && key=="down"){
+      println("Ayiyi");
+      y = y +10;}
+  if(keyPressed && key=="right"){
+    println("Pa la derecha");
+    x = x+10;}
+  if(keyPressed && key=="left"){
+    println("Pa la izquierda");
+    x = x-10;}
+  if(x==0){
+    x=120;}
+  if(y==0){
+    y=120;}
+  if(x==250){
+    x=120;}
+  if(y==250){
+    y=120;}
+  }
