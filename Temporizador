@@ -1,32 +1,19 @@
-int
-int
+//Recordatorio:
+   //*se crashea a veces y empieza restando desde el 50 por alguina extraña razon.
+   //*El texto al principio se queda mal puesto y se ve pixelado.
+
+int t1 = second()/1;
 
 void main(){
-println (second());
-text("TEMPORIZADOR",90,50);
-  reloj();
-  temporizador();
-}
+  animate(ejecutar1);}
 
-void reloj(){
-  println(second(5));
-}
-
-void nombre(){
-  text(TEMPORIZADOR,160,160);
-}
-void temporizador(){
-  if ((second)>0) second -1
-}
-
-void aleatorio(){
-  
-  double aleatorio;
-	aleatorio = random();
-	println(aleatorio);
-	aleatorio = random(background(223,41,41));
-	println(aleatorio);
-	aleatorio = random(background(233,31,31));
-	println(aleatorio);
-  
+void ejecutar1(){
+  text("5 segundos y cambia el color del fondo",15,40);
+  textSize(13);
+  int a = t1 - second()/1;
+  println ("Segundos"+ a );
+  if(a<=-5){ 
+    t1=second()/1;   
+    a = t1 - second()/1;
+    background(random(256),random(256),random(256));}
 }
