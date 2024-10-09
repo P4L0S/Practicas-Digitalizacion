@@ -1,8 +1,4 @@
-//Recordatorio:
-   //*se crashea a veces y empieza restando desde el 50 por alguina extraña razon.
-   //*El texto al principio se queda mal puesto y se ve pixelado.
-
-int t1 = second()/1;
+int t1 = millis()/1000;
 
 void main(){
   animate(ejecutar1);}
@@ -10,10 +6,10 @@ void main(){
 void ejecutar1(){
   text("5 segundos y cambia el color del fondo",15,40);
   textSize(13);
-  int a = t1 - second()/1;
+  int a = t1 - millis()/1000;
   println ("Segundos"+ a );
   if(a<=-5){ 
-    t1=second()/1;   
-    a = t1 - second()/1;
+    t1=millis()/1000;   
+    a = t1 - millis()/1000;
     background(random(256),random(256),random(256));}
 }
