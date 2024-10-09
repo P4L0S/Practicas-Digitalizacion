@@ -1,1 +1,28 @@
-a
+void main(){
+  animate(ejecutar);
+}
+
+
+
+void ejecutar(){
+  image("https://image.cdn2.seaart.ai/2024-06-18/cpp01rde878c739kg8p0/7cd93ba4c86a4ada6092a15fa7e2d67090837f14_high.webp",0,0,320,320);
+  rect(120,120,80,80);
+  rect(120,120,80,80);
+  rect(120,120,80,80);
+  rect(120,120,80,80);
+  rect(120,120,80,80);
+}
+
+void control(){	
+  println("x: " + mouseX);
+  println("y: " + mouseY);
+  if (mousePressed)
+    if(mouseX>120 && mouseX <200)
+    if(mouseY>120 && mouseY<200)
+    if(mousePressed){
+      if(mouseButton ==LEFTBUTTON){
+        image("https://shawellness.com/shamagazine/wp-content/uploads/2018/07/POST-09-2018--724x450.jpg",0,0,350,325);
+        rect(120,120,80,80);
+        }
+  }
+}
