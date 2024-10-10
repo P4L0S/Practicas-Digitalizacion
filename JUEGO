@@ -77,58 +77,58 @@ void salir(){
                                
                                
 void opciones2(){
-  background(255,0,0);
-  fill(255,0,60);
+  image("https://img.freepik.com/vector-premium/pinones-mecanismos-rueda-dentada-tecnologia-e-ingenieria-digital-alta-tecnologia-fondo-tecnico-abstracto_302149-28.jpg",0,0,325,325);
+  fill(255,255,255);
   rect(10,10,40,40);
-  fill(0,0,300);
-  text ("<=" ,20,37); 
-  fill(198,255,101);
-  rect (40,70,260,180);
-  fill(0,0,300);
-  text("W para mover hacia arriba" ,50,110);
-  text("S para mover hacia abajo" ,50,140);
-  text("A para mover a la izquierda" ,50,170);
-  text("D para mover a la derecha" ,50,200);
-  text("Espacio para saltar" ,50,230); 
+  fill(185,0,255);
+  text ("<" ,20,37); 
+  fill(255,255,255);
+  rect (170,160,130,140);
+  fill(0,0,0);
+  text("W = mover hacia arriba" ,50,110);
+  text("S = mover hacia abajo" ,50,140);
+  text("A = mover a la izquierda" ,50,170);
+  text("D = mover a la derecha" ,50,200);
+  text("Espace = saltar" ,50,230); 
   if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill (0,0,500);
   rect(10,10,40,40);
   fill (0,200,500);
-  text ("<=" ,20, 37);
-     if (mousePressed) {println("<=");
+  text ("<" ,20, 37);
+     if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}}
         
   void creditos2(){
   image ("https://media.adeo.com/media/3752729/media.jpg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",0,0,325,325);
+  image ("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",80,85,150,150);
   fill(255,255,255);  
   rect(10,10,40,40);
   fill(185,0,255);
     {textSize(15);
-     text ("<=" ,20,37);} 
+     text ("<" ,20,37);} 
   fill(0,0,0);
-    {textSize(10);
-     text ("-Mario z Ibañez" ,85,90);
-    text ("Imagenes usadas de google" ,72,110);
-    text("Disfruten del juego",72,190);}
+    {textSize(15);
+     text ("-Mario Ruiz Ibañez" ,60,85);
+     text("-Disfruten del juego",60,260);}
   if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill (0,0,500); 
   rect(10,10,40,40);
   fill (0,200,500);
     {textSize(15);
-     text ("<=" ,20, 37);}
-     if (mousePressed) {println("<=");
+     text ("<" ,20, 37);}
+     if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}}
 
         
         
   void play2(){
- image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYvNkFP9aP3-4-EHa5F4eIsX244-hpEN-Pw&usqp=CAU",0,0,320,320);
-  fill(0,300,100);
+ image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
+  fill(255,255,255);
   rect(10,10,40,40);
-  fill(0,0,300);
-   text ("<=" ,20,37);
+  fill(161,0,255);
+   text ("<" ,20,37);
     fill(207,193,193);
     rect(90,140,150,40);
       fill(0,0,300);
@@ -137,8 +137,8 @@ void opciones2(){
   fill (0,0,500);
   rect(10,10,40,40);
   fill (0,200,500);
-  text ("<=" ,20,37);
-     if (mousePressed) {println("<=");
+  text ("<" ,20,37);
+     if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}}
         
@@ -198,24 +198,24 @@ void clasificacion2(){
   fill(195,182,182);
   rect(60,20,200,30);
   fill(255,0,0);
-  text("CLASIFICACION", 85,40);
+  text("Ranking", 85,40);
          fill(0,300,100);
   rect(10,10,40,40);
   fill(140,28,237);
-   text ("<=" ,20,37);
+   text ("<" ,20,37);
    if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill(253,253,253);
   rect(10,10,40,40);
   fill (0,200,500);
-  text ("<=" ,20,37);
-     if (mousePressed) {println("<=");
+  text ("<" ,20,37);
+     if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}
   
   int  posY = 80;
   for(int i = 1; i<= 10; i++) {
     fill(0,0,0);
-    text(i + ". Lugar: Jugador ", 25, posY);
+    text(i + ". Puesto: Jugador ", 25, posY);
     posY += 20;
   }
   
