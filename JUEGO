@@ -81,19 +81,22 @@ void opciones2(){
   fill(255,255,255);
   rect(10,10,40,40);
   fill(185,0,255);
+  textSize(20);
   text ("<" ,20,37); 
   fill(255,255,255);
   rect (170,160,130,140);
   fill(0,0,0);
-  text("W = mover hacia arriba" ,50,110);
-  text("S = mover hacia abajo" ,50,140);
-  text("A = mover a la izquierda" ,50,170);
-  text("D = mover a la derecha" ,50,200);
-  text("Espace = saltar" ,50,230); 
+  textSize(7);
+  text("W = mover hacia arriba" ,180,200);
+  text("S = mover hacia abajo" ,180,220);
+  text("A = mover a la izquierda" ,180,240);
+  text("D = mover a la derecha" ,180,260);
+  text("Espace = saltar" ,180,280); 
   if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill (0,0,500);
   rect(10,10,40,40);
   fill (0,200,500);
+  textSize(20);
   text ("<" ,20, 37);
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
@@ -105,7 +108,7 @@ void opciones2(){
   fill(255,255,255);  
   rect(10,10,40,40);
   fill(185,0,255);
-    {textSize(15);
+    {textSize(20);
      text ("<" ,20,37);} 
   fill(0,0,0);
     {textSize(15);
@@ -115,7 +118,7 @@ void opciones2(){
   fill (0,0,500); 
   rect(10,10,40,40);
   fill (0,200,500);
-    {textSize(15);
+    {textSize(20);
      text ("<" ,20, 37);}
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
@@ -128,6 +131,7 @@ void opciones2(){
   fill(255,255,255);
   rect(10,10,40,40);
   fill(161,0,255);
+    textSize(20);
    text ("<" ,20,37);
     fill(207,193,193);
     rect(90,140,150,40);
@@ -137,6 +141,7 @@ void opciones2(){
   fill (0,0,500);
   rect(10,10,40,40);
   fill (0,200,500);
+    textSize(20);
   text ("<" ,20,37);
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
@@ -183,7 +188,7 @@ void clasificacion(){
   rect(10,10,40,40);
    fill(0,200,500);
   text ("?" ,25,40); 
-  if (mousePressed) {println("clasi");
+  if (mousePressed) {println("Ranking");
                     animate(clasificacion2); 
                                      }}}
 
@@ -201,12 +206,14 @@ void clasificacion2(){
   text("Ranking", 85,40);
          fill(0,300,100);
   rect(10,10,40,40);
+        textSize(20);
   fill(140,28,237);
    text ("<" ,20,37);
    if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill(253,253,253);
   rect(10,10,40,40);
   fill (0,200,500);
+     textSize(20);
   text ("<" ,20,37);
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
