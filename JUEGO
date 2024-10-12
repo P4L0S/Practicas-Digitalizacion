@@ -144,7 +144,8 @@ void opciones2(){
                       animate(menuprincipal); 
                        }}
   if (keyPressed){println("Ichigo");
-                  animate(ejecutar);}}
+                  animate(ejecutar);
+                 animate(name);}}
         
         
         
@@ -262,4 +263,3 @@ void player(){
   if(y==250){
     y=120;}
 }
-     
