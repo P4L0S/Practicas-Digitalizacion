@@ -127,26 +127,11 @@ void opciones2(){
         
         
   void play2(){
- image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
-  fill(255,255,255);
-  rect(10,10,40,40);
-  fill(161,0,255);
-    textSize(20);
-   text ("<" ,20,37);
-    
-  if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
-  fill (0,0,500);
-  rect(10,10,40,40);
-  fill (0,200,500);
-    textSize(20);
-  text ("<" ,20,37);
-     if (mousePressed) {println("<");
-                      animate(menuprincipal); 
-                       }}
-  if (keyPressed){println("Ichigo");
+ image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
+ if (keyPressed){println("Ichigo");
                   animate(ejecutar);
-                 animate(name);}}
-        
+                  name();}}
+     
         
         
  void fondo(){
@@ -161,7 +146,7 @@ void opciones2(){
            animate(menuprincipal);
    }}
 
-        
+    
 
 void name(){
   fill(0,255,155);
@@ -241,7 +226,13 @@ void ejecutar(){
  
 }           
 void player(){
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",x,y,150,150);
+  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
+   fill(255,255,255);
+  rect(10,10,40,40);
+  fill(161,0,255);
+    textSize(20);
+   text ("<" ,20,37);
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",x,y,150,150);
   if(keyPressed && key=="up"){
     println("Opa");
     y = y -10;}
@@ -262,4 +253,12 @@ void player(){
     x=120;}
   if(y==250){
     y=120;}
-}
+  if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
+  fill (0,0,500);
+  rect(10,10,40,40);
+  fill (0,200,500);
+    textSize(20);
+  text ("<" ,20,37);
+     if (mousePressed) {println("<");
+                        animate(menuprincipal);
+  }}}
