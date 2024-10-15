@@ -180,14 +180,14 @@ void name(){
 void clasificacion(){
   println(mouseY);
   fill(245,245,245);
-  rect (10,10,40,40);
+  rect (260,10,40,40);
   fill(2,2,2);
-  text ("?" ,25,40);
-  if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
+  text ("?" ,270,40);
+  if (mouseX>=260 && mouseX<=300 && mouseY>=10 && mouseY<=50){
   fill (0,0,500);
-  rect(10,10,40,40);
+  rect(260,10,40,40);
    fill(0,200,500);
-  text ("?" ,25,40); 
+  text ("?" ,270,40); 
   if (mousePressed) {println("Ranking");
                     animate(clasificacion2); 
                                      }}}
