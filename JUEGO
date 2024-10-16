@@ -146,7 +146,9 @@ void opciones2(){
            animate(menuprincipal);
    }}
 
-    
+  String nombre;
+  int anchoHola = textWidth(" ");
+  int anchoEspacio = textWidth(" ");
 
 void name(){
   fill(0,255,155);
@@ -158,8 +160,10 @@ void name(){
   println(" bienvenido a la aventura");
   int anchoHola = textWidth(" ");
   int anchoEspacio = textWidth(" ");
-  text(nombre, anchoHola+anchoEspacio, 290);   
-           }
+}
+
+void nombrePantalla(){
+text(nombre, anchoHola+anchoEspacio, 290);}
 
 
 void clasificacion(){
@@ -228,7 +232,8 @@ void ejecutar(){
 void player(){
   
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
-   fill(255,255,255);
+nombrePantalla();   
+fill(255,255,255);
   rect(10,10,40,40);
   fill(161,0,255);
     textSize(20);
