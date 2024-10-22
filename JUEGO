@@ -10,7 +10,7 @@ void menuprincipal(){
  creditos();
  salir();
  clasificacion();
- if (mousePressed && keyPressed) animate(name);
+  
 }
 
 
