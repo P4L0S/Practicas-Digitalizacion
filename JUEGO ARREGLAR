@@ -1,8 +1,20 @@
 void main (){
   animate(fondo);
 }
+//PANTALLA PRINCIPAL
+void fondo(){
+      image("https://img.freepik.com/fotos-premium/cerca-empresario-presione-tecla-teclado-computadora-aislado-sobre-fondo-blanco_160672-14896.jpg?w=360",0,0,325,325);
+   textSize(15);
+    text("Toca una tecla ;)",10,225);
+   fill(239,0,0);
+    stroke(0,0,0);
+     textSize(15);
+    text("Toca una tecla ;)",10,225);
+   if (keyPressed) 
+           animate(menuprincipal);
+ }
 
-
+//MENU DEL JUEGO 
 void menuprincipal(){
   image("https://i.blogs.es/f370df/24yvinp.jpg/840_560.png",0,0,320,320);
   play();
@@ -13,9 +25,7 @@ void menuprincipal(){
   
 }
 
-
-
-        
+//JUEGO
 void play(){
      fill(255,255,255);
      ellipse(160,90,170,170); 
@@ -31,8 +41,92 @@ void play(){
        println ("play");
     	 animate(play2);
                      }}
-        
 
+void play2(){
+ image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
+ if (keyPressed){println("Ichigo");
+                  name();
+                  animate(ejecutar);}}
+
+String nombre;
+  int anchoHola = textWidth(" ");
+  int anchoEspacio = textWidth(" ");
+
+//NOMBRE QUE SALE EN PANTALLA
+void name(){
+  fill(0,255,155);
+  rect(1,261,80,50);
+  fill(155,0,255);
+  String nombre = readString("Escribe tu nombre");
+  print("hola ");
+  print(nombre);
+  println(" bienvenido a la aventura");
+  int anchoHola = textWidth(" ");
+  int anchoEspacio = textWidth(" ");
+}
+
+void nombrePantalla(){
+text(nombre, anchoHola+anchoEspacio, 290);}
+
+//JUGADOR
+int x=120;
+int y=120;
+
+void ejecutar(){
+  player();
+ 
+}           
+void player(){
+  
+ image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
+nombrePantalla();   
+fill(255,255,255);
+  rect(10,10,40,40);
+  fill(161,0,255);
+    textSize(20);
+   text ("<" ,20,37);
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",x,y,150,150);
+  
+  if(keyPressed && key=="up"){
+    println("Arriba");
+    y = y -10;}
+  
+    if(keyPressed && key=="down"){
+      println("Abajo");
+      y = y +10;}
+  
+  if(keyPressed && key=="right"){
+    println("Derecha");
+    x = x+10;}
+  
+  if(keyPressed && key=="left"){
+    println("Izquierda");
+    x = x-10;}
+  
+  if(x==0){
+    x=150;}
+  
+  if(y==0){
+    y=120;}
+  
+  if(x==250){
+    x=20;}
+  
+  if(y==250){
+    y=150;}
+  
+  if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
+  fill (0,0,500);
+  rect(10,10,40,40);
+  fill (0,200,500);
+    textSize(20);
+  text ("<" ,20,37);
+  }
+     if (mousePressed) {println("<");
+                        animate(menuprincipal);
+                       }}
+
+//OPCIONES DEL JUEGO
 void opciones(){
   fill(247,239,239);
   rect(20,190,120,40);
@@ -48,39 +142,8 @@ void opciones(){
      if (mousePressed) {
        println("Ajustes");
                       animate(opciones2); 
-     }}  
-        
-void creditos(){
-  fill(255,255,255);
-  rect(180,190,120,40);
-   fill(172,56,207);
-  text ("Créditos" ,200,215);
-  if (mouseX>=180 && mouseX<=300 && mouseY>=190 && mouseY<=230){
-  fill (0,0,500);
-  rect(180,190,120,40);
-   fill(0,200,500);
-    text ("Créditos" ,200,215);}
-  
-    if (mousePressed) {
-      println("créditos");
-      animate(creditos2);   
-                    }}
-         
-void salir(){
-  fill(255,255,255);
-  rect(100,240,120,40);
-  fill(173,0,255);
-  text ("Salir" ,140, 265);
-  if (mouseX>=100 && mouseX<=220 && mouseY>=240 && mouseY<=280){
-  fill (0,0,500);
-  rect(100,240,120,40);
-  fill(100,211,233);
-    text ("salir" ,140, 265);
-  }
-  if (mousePressed) {println("salir");
-                    animate(fondo);   
-                    }}
-                               
+     }}
+
 void opciones2(){
   image("https://img.freepik.com/vector-premium/pinones-mecanismos-rueda-dentada-tecnologia-e-ingenieria-digital-alta-tecnologia-fondo-tecnico-abstracto_302149-28.jpg",0,0,325,325);
   fill(255,255,255);
@@ -107,8 +170,25 @@ void opciones2(){
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}
-        
-  void creditos2(){
+
+//CREDITOS DEL JUEGO
+void creditos(){
+  fill(255,255,255);
+  rect(180,190,120,40);
+   fill(172,56,207);
+  text ("Créditos" ,200,215);
+  if (mouseX>=180 && mouseX<=300 && mouseY>=190 && mouseY<=230){
+  fill (0,0,500);
+  rect(180,190,120,40);
+   fill(0,200,500);
+    text ("Créditos" ,200,215);}
+  
+    if (mousePressed) {
+      println("créditos");
+      animate(creditos2);   
+                    }}
+
+void creditos2(){
   image ("https://media.adeo.com/media/3752729/media.jpg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",0,0,325,325);
   image ("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",80,85,150,150);
   fill(255,255,255);  
@@ -120,58 +200,36 @@ void opciones2(){
   textSize(15);
   text ("-Mario Ruiz Ibañez" ,60,85);
   text("-Disfruten del juego",60,260);
-  }
+  
+
   if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
   fill (0,0,500); 
   rect(10,10,40,40);
   fill (0,200,500);
-    {textSize(20);
-     text ("<" ,20, 37);
+  textSize(20);
+  text ("<" ,20, 37);
     }
-     if (mousePressed) {println("<");
-                      animate(menuprincipal); 
-                       }}
 
-        
-        
-  void play2(){
- image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
- if (keyPressed){println("Ichigo");
-                  name();
-                  animate(ejecutar);}}
-     
-        
-        
- void fondo(){
-      image("https://img.freepik.com/fotos-premium/cerca-empresario-presione-tecla-teclado-computadora-aislado-sobre-fondo-blanco_160672-14896.jpg?w=360",0,0,325,325);
-   textSize(15);
-    text("Toca una tecla ;)",10,225);
-   fill(239,0,0);
-    stroke(0,0,0);
-     textSize(15);
-    text("Toca una tecla ;)",10,225);
-   if (keyPressed) 
-           animate(menuprincipal);
- }
-  String nombre;
-  int anchoHola = textWidth(" ");
-  int anchoEspacio = textWidth(" ");
+  if (mousePressed) {println("<");
+         animate(menuprincipal); 
+                    }}
 
-void name(){
-  fill(0,255,155);
-  rect(1,261,80,50);
-  fill(155,0,255);
-  String nombre = readString("Escribe tu nombre");
-  print("hola ");
-  print(nombre);
-  println(" bienvenido a la aventura");
-  int anchoHola = textWidth(" ");
-  int anchoEspacio = textWidth(" ");
-}
-
-void nombrePantalla(){
-text(nombre, anchoHola+anchoEspacio, 290);}
-
+//SALIDA DEL JUEGO A LA PANTALLA PRINCIPAL
+void salir(){
+  fill(255,255,255);
+  rect(100,240,120,40);
+  fill(173,0,255);
+  text ("Salir" ,140, 265);
+  if (mouseX>=100 && mouseX<=220 && mouseY>=240 && mouseY<=280){
+  fill (0,0,500);
+  rect(100,240,120,40);
+  fill(100,211,233);
+    text ("salir" ,140, 265);
+  }
+  
+  if (mousePressed) {println("salir");
+                    animate(fondo);   
+                    }}
 
 void clasificacion(){
   println(mouseY);
@@ -185,14 +243,11 @@ void clasificacion(){
    fill(0,200,500);
     text ("?" ,270,40);
   } 
+  
   if (mousePressed) {println("Ranking");
                     animate(clasificacion2); 
                                      }}
 
-
-
-
-  
 void clasificacion2(){
   image("https://img.freepik.com/foto-gratis/concepto-material-madera-textura-papel-pintado-fondo_53876-42925.jpg",0,0,325,325);
   fill(255,255,255);
@@ -213,6 +268,7 @@ void clasificacion2(){
   fill (0,200,500);
      textSize(20);
   text ("<" ,20,37);
+     
      if (mousePressed) {println("<");
                       animate(menuprincipal); 
                        }}
@@ -222,57 +278,6 @@ void clasificacion2(){
     fill(0,0,0);
     text(i + ". Puesto: Jugador ", 25, posY);
     posY += 20;
-  }
-        
-
-           
+  }}
   
-}
-        
-        
-int x=120;
-int y=120;
-
-void ejecutar(){
-  player();
- 
-}           
-void player(){
   
- image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
-nombrePantalla();   
-fill(255,255,255);
-  rect(10,10,40,40);
-  fill(161,0,255);
-    textSize(20);
-   text ("<" ,20,37);
-    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",x,y,150,150);
-  if(keyPressed && key=="up"){
-    println("Arriba");
-    y = y -10;}
-    if(keyPressed && key=="down"){
-      println("Abajo");
-      y = y +10;}
-  if(keyPressed && key=="right"){
-    println("Derecha");
-    x = x+10;}
-  if(keyPressed && key=="left"){
-    println("Izquierda");
-    x = x-10;}
-  if(x==0){
-    x=150;}
-  if(y==0){
-    y=120;}
-  if(x==250){
-    x=20;}
-  if(y==250){
-    y=150;}
-  if (mouseX>=10 && mouseX<=50 && mouseY>=10 && mouseY<=50){
-  fill (0,0,500);
-  rect(10,10,40,40);
-  fill (0,200,500);
-    textSize(20);
-  text ("<" ,20,37);
-     if (mousePressed) {println("<");
-                        animate(menuprincipal);
-                       }}}
