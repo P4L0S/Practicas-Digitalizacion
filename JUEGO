@@ -79,7 +79,7 @@ fill(255,255,255);
   fill(161,0,255);
     textSize(20);
    text ("<" ,20,37);
-    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",x,y,150,150);
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,150,150);
   
   if(keyPressed && key=="up"){
     println("Arriba");
