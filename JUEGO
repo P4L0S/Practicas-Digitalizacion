@@ -72,7 +72,6 @@ void ejecutar(){
 }           
 void player(){
   
- image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",0,0,150,150);
 nombrePantalla();   
 fill(255,255,255);
   rect(10,10,40,40);
@@ -137,7 +136,7 @@ void opciones2(){
 //CREDITOS DEL JUEGO
 void creditos2(){
   image ("https://media.adeo.com/media/3752729/media.jpg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",0,0,325,325);
-  image ("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGENES/pixil-frame-0.png?raw=true",80,85,150,150);
+  image ("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",80,85,150,150);
   fill(255,255,255);  
   rect(10,10,40,40);
   fill(185,0,255);
