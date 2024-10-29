@@ -72,7 +72,7 @@ void ejecutar(){
 }           
 void player(){
   
- image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325);
+ image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/pixil-frame-0%20(1).png?raw=true",0,0,325,325);
 nombrePantalla();   
 fill(255,255,255);
   rect(10,10,40,40);
