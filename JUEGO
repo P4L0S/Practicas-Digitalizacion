@@ -40,7 +40,16 @@ void play2(){
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
  if (keyPressed){println("Ichigo");
                   name();
-                  animate(ejecutar);}}
+                 animate(ejecutar);
+                
+        
+                }
+         
+                
+                
+                }
+
+
 
 String nombre;
   int anchoHola = textWidth(" ");
@@ -78,7 +87,7 @@ fill(255,255,255);
   fill(161,0,255);
     textSize(20);
    text ("<" ,20,37);
-    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,150,150);
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,75,75);
   
   if(keyPressed && key=="up"){
     println("Arriba");
@@ -102,11 +111,11 @@ fill(255,255,255);
   if(y==0){
     y=120;}
   
-  if(x==250){
-    x=20;}
+  if(x==300){
+    nivel1();}
   
-  if(y==250){
-    y=150;}
+  if(y==140){
+    nivel1();}
   
   boton();
   funcionboton();}
@@ -170,6 +179,52 @@ void clasificacion2(){
     funcionboton();
   }}
   
+//NIVEL 1 
+void nivel1 (){
+  animate(permafarmeo);
+}
+//LO QUE HACE EL PERMAFARMEO
+void permafarmeo(){
+  fill(255,255,255);
+  rect(10,10,40,40);
+  fill(161,0,255);
+    textSize(20);
+   text ("<" ,20,37);
+  image("https://thumbs.dreamstime.com/b/ejemplo-detallado-del-vector-fondo-infierno-arte-pixel-138236202.jpg",0,0,325,325);
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,75,75);
+  
+  if(keyPressed && key=="up"){
+    println("Arriba");
+    y = y -10;}
+  
+    if(keyPressed && key=="down"){
+      println("Abajo");
+      y = y +10;}
+  
+  if(keyPressed && key=="right"){
+    println("Derecha");
+    x = x+10;}
+  
+  if(keyPressed && key=="left"){
+    println("Izquierda");
+    x = x-10;}
+  
+  if(x==0){
+    x=150;}
+  
+  if(y==0){
+    y=120;}
+  
+  if(x==250){
+    x=20;}
+  
+  if(y==250){
+    y=150;}
+  boton();
+  funcionboton();
+}
+
+
 //BOTON PARA SALIR DE TODO
   void boton (){
     fill (0,0,500); 
