@@ -38,7 +38,7 @@ void menuprincipal(){
 //JUEGO
 void play2(){
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
- if (keyPressed){println("Ichigo");
+ if (keyPressed){println("Nombre del jugador");
                   name();
                  animate(ejecutar);
                 
@@ -57,8 +57,6 @@ String nombre;
 
 //NOMBRE QUE SALE EN PANTALLA
 void name(){
-  fill(0,255,155);
-  rect(1,261,80,50);
   fill(155,0,255);
   nombre = readString("Escribe tu nombre");
   print("Hola ");
@@ -110,16 +108,17 @@ fill(255,255,255);
     x=150;}
   
   if(y==0){
-    y=120;}
+    y=150;}
+  
+  if(y==310){
+    y=150;}
   
   if(x==300){
     nivel1();}
   
-  if(y==300){
-    nivel1();}
-  
   boton();
-  funcionboton();}
+  funcionboton();
+}
 
 //OPCIONES DEL JUEGO
 
