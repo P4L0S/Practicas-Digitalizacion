@@ -60,8 +60,8 @@ void name(){
   fill(0,255,155);
   rect(1,261,80,50);
   fill(155,0,255);
-  String nombre = readString("Escribe tu nombre");
-  print("hola ");
+  nombre = readString("Escribe tu nombre");
+  print("Hola ");
   print(nombre);
   println(" bienvenido a la aventura");
   int anchoHola = textWidth(" ");
@@ -69,7 +69,8 @@ void name(){
 }
 
 void nombrePantalla(){
-text(nombre, anchoHola+anchoEspacio, 290);}
+text(nombre, anchoHola+anchoEspacio, 290);
+}
 
 //JUGADOR
 int x=120;
