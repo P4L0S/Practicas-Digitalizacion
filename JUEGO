@@ -182,6 +182,7 @@ void clasificacion2(){
 //NIVEL 1 
 void nivel1 (){
   animate(permafarmeo);
+  enemigo();
 }
 //LO QUE HACE EL PERMAFARMEO
 void permafarmeo(){
@@ -224,29 +225,27 @@ void permafarmeo(){
   boton();
   funcionboton();
   nombrePantalla();
-  movimientoenemigo();
   
 }
 
-//ENEMIGO DEL NIVEL 1
+//ENEMIGO
 
 int xenemigo=120;
 int yenemigo=120;
 
-void movimientoenemigo(){
-  animate(enemigo);
+void enemigo(){
+  animate(funcionenemigo);
 }
 
-void enemigo(){
+void funcionenemigo(){
+  
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(2).png?raw=true",50,50,70,70);
     
-  if(xenemigo<x){
+  if (xenemigo<x){
     xenemigo=xenemigo+5;}
   
   if(yenemigo<y){
       yenemigo=yenemigo+5;}
-  
-
 }
 
 //GAME OVER
