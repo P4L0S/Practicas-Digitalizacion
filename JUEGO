@@ -40,14 +40,8 @@ void play2(){
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
  if (keyPressed){println("Nombre del jugador");
                   name();
-                 animate(ejecutar);
-                
-        
-                }
-         
-                
-                
-                }
+                 animate(ejecutar);}}
+                 
 
 
 
@@ -79,15 +73,29 @@ void ejecutar(){
  
 }           
 void player(){
- image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
-nombrePantalla();   
-fill(255,255,255);
+  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
+  nombrePantalla();   
+  fill(255,255,255);
   rect(10,10,40,40);
   fill(161,0,255);
-    textSize(20);
-   text ("<" ,20,37);
-    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,75,75);
+  textSize(20);
+  text ("<" ,20,37);
   
+  fill(255,255,255);
+  rect(80,10,210,40);
+  fill(255,255,255);
+  rect(10,100,210,20);
+  fill(255,255,255);
+  rect(10,150,290,20);
+  
+  fill(191,27,27);
+  text("¿Cómo se juega?",80,40);
+  textSize(10);
+  text("*Debes alimentar a Kerby*",20,115);
+  textSize(10);
+  text("*Mientras lo alimentas debes esquivar el fuego*",15,165);
+  
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",x,y,75,75);
   if(keyPressed && key=="up"){
     println("Arriba");
     y = y -10;}
@@ -246,6 +254,19 @@ void funcionenemigo(){
   
   if(yenemigo<y){
       yenemigo=yenemigo+5;}
+}
+
+//COMIDA
+
+int xpiruleta=120;
+int ypiruleta=120;
+
+void comida(){
+  animate(piruleta);
+}
+
+void piruleta(){
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true",50,50,60,60);
 }
 
 //GAME OVER
