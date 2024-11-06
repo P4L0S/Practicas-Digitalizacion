@@ -182,7 +182,6 @@ void clasificacion2(){
 //NIVEL 1 
 void nivel1 (){
   animate(permafarmeo);
-  enemigo();
 }
 //LO QUE HACE EL PERMAFARMEO
 void permafarmeo(){
@@ -225,6 +224,7 @@ void permafarmeo(){
   boton();
   funcionboton();
   nombrePantalla();
+  
   
 }
 
