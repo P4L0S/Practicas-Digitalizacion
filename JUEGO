@@ -210,21 +210,53 @@ void permafarmeo(){
     x = x-10;}
   
   if(x==0){
-    x=150;}
+    x=10;}
   
   if(y==0){
-    y=120;}
+    y=10;}
   
   if(x==250){
-    x=20;}
+    x=240;}
   
-  if(y==250){
-    y=150;}
+  if(y==310){
+    y=300;}
+   
   boton();
   funcionboton();
   nombrePantalla();
+  enemigo();
+  
 }
 
+//ENEMIGO DEL NIVEL 1
+
+int xenemigo=120;
+int yenemigo=120;
+
+void enemigo(){
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(2).png?raw=true",50,50,70,70);
+    
+  if(xenemigo<x){
+    xenemigo=150;}
+  
+  if(yenemigo<y){
+    yenemigo=120;}
+  
+
+}
+
+//GAME OVER
+
+void gameover(){
+  fill(255,255,255);
+  rect(10,10,40,40);
+  fill(161,0,255);
+    textSize(20);
+   text ("<" ,20,37);
+  image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Fv%25C3%25ADdeos%2Fgame-over&psig=AOvVaw3kALgizRx58XXjAFT-WWAV&ust=1730981553978000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKC6lbnMwokDFQAAAAAdAAAAABAE",0,0,325,325);
+  boton();
+  funcionboton();
+}
 
 //BOTON PARA SALIR DE TODO
   void boton (){
