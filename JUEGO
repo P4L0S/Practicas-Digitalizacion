@@ -218,8 +218,8 @@ void permafarmeo(){
   if(x==250){
     x=240;}
   
-  if(y==310){
-    y=300;}
+ if(y==260){
+    y=250;}
    
   boton();
   funcionboton();
