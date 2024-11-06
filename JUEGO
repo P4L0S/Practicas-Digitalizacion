@@ -266,7 +266,7 @@ void comida(){
 }
 
 void piruleta(){
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true",50,50,60,60);
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true",50,50,30,30);
 }
 
 //GAME OVER
