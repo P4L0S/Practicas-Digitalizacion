@@ -287,7 +287,7 @@ void HUD(){
   rect(8,2,120,15);
   fill(0,0,0);
   textSize(10);
-  text ("CARAMELOS:   " + puntos, 10,15);
+  text ("PIRULETAS:   "+ puntos, 10,15);
 }
 
 //FRENO
