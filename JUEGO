@@ -192,7 +192,7 @@ void juego(){
   player();
   enemigo();
   PotPuntos();
-  HUD();
+  PUNTOS();
   temp(5);
   PotFreno();
   tiempoFreno();
@@ -205,10 +205,9 @@ int PosEneY = 50;
 int velEneOri = 5;
 int velEne = velEneOri;
 int velEneFre = 2;
-int tX = 50;
-int tY = 50;
-int xJUGADOR = 160-tX;
-int yJUGADOR = 160-tY;
+
+int xJUGADOR = 160;
+int yJUGADOR = 160;
 int velocidad =10;
 
 void enemigo(){
@@ -217,25 +216,26 @@ void enemigo(){
   int EneY = 40;
   
   //ENEMIGO
+  
   image("https://wallpapers.com/images/hd/aesthetic-pixel-art-hd-zx9lnoxvvasrxsw0.jpg",0,0,325,325);
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(2).png?raw=true",PosEneX,PosEneY,EneX,EneY);
   
-  if (PosEneX > xJUGADOR+tX/2){
+  if (PosEneX > xJUGADOR+2){
     PosEneX = PosEneX - velEne;
   }
-  if (PosEneX < xJUGADOR+tX/2){
+  if (PosEneX < xJUGADOR+2){
     PosEneX = PosEneX + velEne;
   } 
-  if (PosEneY > yJUGADOR+tY/2){
+  if (PosEneY > yJUGADOR+2){
     PosEneY = PosEneY - velEne;
   }
-  if (PosEneY < yJUGADOR+tY/2){
+  if (PosEneY < yJUGADOR+2){
     PosEneY = PosEneY + velEne;
   } 
   
   //JUGADOR
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",xJUGADOR,yJUGADOR,tX,tY);
-  
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",xJUGADOR,yJUGADOR,50,50);
+  nombrePantalla();
   
   if (keyPressed && key =="up") {
     yJUGADOR = yJUGADOR-velocidad;
@@ -253,14 +253,14 @@ void enemigo(){
   if (xJUGADOR <= 0){
     xJUGADOR = 0;
   }
-  if (xJUGADOR >= 320-tX){
-    xJUGADOR = 320-tX;
+  if (xJUGADOR >= 280){
+    xJUGADOR = 280;
   }
   if (yJUGADOR <= 0){
     yJUGADOR = 0;
   }
-  if (yJUGADOR >= 320-tY){
-    yJUGADOR = 320-tY;
+  if (yJUGADOR >= 280){
+    yJUGADOR = 280;
   }
 }
 
@@ -274,7 +274,7 @@ int puntos =0;
 
 void PotPuntos(){
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true", CARAMELOX-4,CARAMELOY+2,35,35);
-  if (xJUGADOR+(tX/2)+5 > CARAMELOX && xJUGADOR+(tX/2)-5 <CARAMELOX && yJUGADOR+(tY/2)+5 > CARAMELOY && yJUGADOR+(tY/2)-5 <CARAMELOY){
+  if (xJUGADOR+2 > CARAMELOX && xJUGADOR+2 <CARAMELOX && yJUGADOR+2 > CARAMELOY && yJUGADOR+2 <CARAMELOY){
     puntos += 1;
     CARAMELOX = random (50,280);
 		CARAMELOY = random (50,280);
@@ -282,7 +282,7 @@ void PotPuntos(){
 }
 
 //PUNTOS DE LOS CARAMELOS
-void HUD(){
+void PUNTOS(){
   fill(255,255,255);
   rect(8,2,120,15);
   fill(0,0,0);
@@ -302,7 +302,7 @@ void PotFreno(){
     }
   if (tiempo == 1 ){
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixilart-sprite.png?raw=true",PotX, PotY, 300,150);
-  if (x+(tX/2)+5 > PotX && x+(tX/2)-5 < PotX && y+(tY/2)+5 > PotY && y+(tY/2)-5 < PotY){
+  if (x+5 > PotX && x-5 < PotX && y+5 > PotY && y-5 < PotY){
     velEne = velEneFre;
    	frenado = -1;
     PotX = random (10,310);
@@ -510,4 +510,3 @@ void funcionboton(){
     }
   }
 }
- 
