@@ -51,7 +51,6 @@ String nombre;
 
 //NOMBRE QUE SALE EN PANTALLA
 void name(){
-  fill(155,0,255);
   nombre = readString("Escribe tu nombre");
   print("Hola ");
   print(nombre);
@@ -61,6 +60,9 @@ void name(){
 }
 
 void nombrePantalla(){
+fill(255,255,255);
+rect(10,260,50,30);
+fill(255,0,0);
 text(nombre, anchoHola+anchoEspacio, 290);
 }
 
