@@ -61,7 +61,7 @@ void name(){
 
 void nombrePantalla(){
 fill(255,255,255);
-rect(10,260,50,30);
+rect(10,260,100,40);
 fill(255,0,0);
 text(nombre, anchoHola+anchoEspacio, 290);
 }
@@ -236,7 +236,7 @@ void enemigo(){
   } 
   
   //JUGADOR
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",xJUGADOR,yJUGADOR,50,50);
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",xJUGADOR,yJUGADOR,60,60);
   nombrePantalla();
   
   if (keyPressed && key =="up") {
@@ -275,12 +275,19 @@ double CARAMELOY = random (50,280);
 int puntos =0;
 
 void PotPuntos(){
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true", CARAMELOX-4,CARAMELOY+2,35,35);
-  if (xJUGADOR+2 > CARAMELOX && xJUGADOR+2 <CARAMELOX && yJUGADOR+2 > CARAMELOY && yJUGADOR+2 <CARAMELOY){
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(3).png?raw=true", CARAMELOX-4,CARAMELOY+2,60,60);
+  if (xJUGADOR+10 > CARAMELOX && xJUGADOR-10 <CARAMELOX && yJUGADOR+10 > CARAMELOY && yJUGADOR-10 <CARAMELOY){
     puntos += 1;
     CARAMELOX = random (50,280);
 		CARAMELOY = random (50,280);
   }
+  
+  if (yJUGADOR+10 > CARAMELOY && yJUGADOR-10 <CARAMELOY && xJUGADOR+10 > CARAMELOX && xJUGADOR-10 <CARAMELOX){
+    puntos += 1;
+    CARAMELOX = random (50,280);
+		CARAMELOY = random (50,280);
+  }
+ 
 }
 
 //PUNTOS DE LOS CARAMELOS
