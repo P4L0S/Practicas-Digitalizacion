@@ -194,10 +194,7 @@ void juego(){
   player();
   enemigo();
   PotPuntos();
-  PUNTOS();
-  temp(5);
-  PotFreno();
-  tiempoFreno();
+  PUNTOS();  
 }
 
 //ENEMIGO
@@ -222,17 +219,21 @@ void enemigo(){
   image("https://wallpapers.com/images/hd/aesthetic-pixel-art-hd-zx9lnoxvvasrxsw0.jpg",0,0,325,325);
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(2).png?raw=true",PosEneX,PosEneY,EneX,EneY);
   
-  if (PosEneX > xJUGADOR+2){
+  if (PosEneX > xJUGADOR+6){
     PosEneX = PosEneX - velEne;
   }
-  if (PosEneX < xJUGADOR+2){
+  if (PosEneX < xJUGADOR+6){
     PosEneX = PosEneX + velEne;
   } 
-  if (PosEneY > yJUGADOR+2){
+  if (PosEneY > yJUGADOR+6){
     PosEneY = PosEneY - velEne;
   }
-  if (PosEneY < yJUGADOR+2){
+  if (PosEneY < yJUGADOR+6){
     PosEneY = PosEneY + velEne;
+    
+    skibiditoilet();
+    sigma();
+  
   } 
   
   //JUGADOR
@@ -299,62 +300,40 @@ void PUNTOS(){
   text ("PIRULETAS:   "+ puntos, 10,15);
 }
 
-//FRENO
-double PotX = random (10,310);
-double PotY = random (10,310);
-int frenado = 1;
-void PotFreno(){
+//VICTORIA 
+
+void sigma(){
+  if (puntos==20){
+    animate(victoria);
+  }
+}
+
+void victoria(){
+  image("https://dailygame.at/wp-content/uploads/2020/03/fortnite-victoryroyale.jpg",0,0,325,325);
+  fill(255,255,255);
+  rect(10,10,40,40);
+  fill(161,0,255);
+    textSize(20);
+   text ("<" ,20,37);
+  image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Fv%25C3%25ADdeos%2Fgame-over&psig=AOvVaw3kALgizRx58XXjAFT-WWAV&ust=1730981553978000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKC6lbnMwokDFQAAAAAdAAAAABAE",0,0,325,325);
+  boton();
+  funcionboton();
+}
   
- if (tiempo == -1){
-   	PotX = random (10,310);
-		PotY = random (10,310);
-    }
-  if (tiempo == 1 ){
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixilart-sprite.png?raw=true",PotX, PotY, 300,150);
-  if (x+5 > PotX && x-5 < PotX && y+5 > PotY && y-5 < PotY){
-    velEne = velEneFre;
-   	frenado = -1;
-    PotX = random (10,310);
-		PotY = random (10,310);
-  }}
-}
 
-//TIEMPO 
+//PARA QUE SE EJECUTE EL GAME OVER
 
-int t1 = millis()/1000;
-int tiempo = -1;
-void temp(int t){
-  int a = -t1 + millis()/1000;
-  if(a>=t){
-    t1=millis()/1000;
-    a = - t1 + millis()/1000;
-    tiempo =tiempo*(-1);
-    
-  }
- 
-}
-void tiempoFreno(){
-  if (frenado == -1){
-    
-  tempEneFre(5);
-}
-}
-
-int t2 = millis()/1000;
-void tempEneFre(int t){
-  int a = -t1 + millis()/1000;
-  if(a>=t){
-    print (velEne);
-    t2=millis()/1000;
-    a = - t1 + millis()/1000;
-    velEne = velEneOri;
-    frenado = -1;
+void skibiditoilet(){
+  if (xJUGADOR==PosEneX && yJUGADOR==PosEneY){
+    animate(gameover);
   }
 }
+
 
 //GAME OVER
 
 void gameover(){
+  image("https://www.funcinema.com.ar/wp-content/uploads/2021/05/GameoverSMB.png",0,0,325,325);
   fill(255,255,255);
   rect(10,10,40,40);
   fill(161,0,255);
