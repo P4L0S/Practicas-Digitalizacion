@@ -10,6 +10,7 @@ void main (){
 }
 //PANTALLA PRINCIPAL
 void fondo(){
+ puntos=0;
       image("https://img.freepik.com/fotos-premium/cerca-empresario-presione-tecla-teclado-computadora-aislado-sobre-fondo-blanco_160672-14896.jpg?w=360",0,0,325,325);
    textSize(15);
     text("Toca una tecla ;)",10,225);
@@ -23,6 +24,7 @@ void fondo(){
 
 //MENU DEL JUEGO 
 void menuprincipal(){
+puntos=0;
   coordenadas();
   image("https://i.blogs.es/f370df/24yvinp.jpg/840_560.png",0,0,320,320);
   botonjugar();
@@ -37,6 +39,7 @@ void menuprincipal(){
 
 //JUEGO
 void play2(){
+puntos=0;
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
  if (keyPressed){println("Nombre del jugador");
                   name();
@@ -71,10 +74,12 @@ int x=120;
 int y=120;
 
 void ejecutar(){
+  int puntos=0;
   player();
  
 }           
 void player(){
+  int puntos=0;
   image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
   nombrePantalla();   
   fill(255,255,255);
@@ -287,6 +292,8 @@ void PotPuntos(){
     puntos += 1;
     CARAMELOX = random (50,280);
 		CARAMELOY = random (50,280);
+    
+ 
   }
  
 }
@@ -324,10 +331,11 @@ void victoria(){
 //PARA QUE SE EJECUTE EL GAME OVER
 
 void skibiditoilet(){
-  if (xJUGADOR==PosEneX && yJUGADOR==PosEneY){
+  if (PosEneX+10==xJUGADOR&&PosEneY+10==yJUGADOR){
     animate(gameover);
   }
 }
+
 
 
 //GAME OVER
