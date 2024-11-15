@@ -236,7 +236,7 @@ void enemigo(){
   if (PosEneY < yJUGADOR+6){
     PosEneY = PosEneY + velEne;
     
-    skibiditoilet();
+    
     sigma();
   
   } 
@@ -330,11 +330,7 @@ void victoria(){
 
 //PARA QUE SE EJECUTE EL GAME OVER
 
-void skibiditoilet(){
-  if (PosEneX+10==xJUGADOR&&PosEneY+10==yJUGADOR){
-    animate(gameover);
-  }
-}
+
 
 
 
