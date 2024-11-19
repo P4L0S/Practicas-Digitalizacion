@@ -213,6 +213,8 @@ int velEneFre = 2;
 int xJUGADOR = 160;
 int yJUGADOR = 160;
 int velocidad =10;
+int EneX = 40;
+  int EneY = 40;
 
 void enemigo(){
  
@@ -226,20 +228,23 @@ void enemigo(){
   
   if (PosEneX > xJUGADOR+6){
     PosEneX = PosEneX - velEne;
+   
   }
   if (PosEneX < xJUGADOR+6){
     PosEneX = PosEneX + velEne;
+    
   } 
   if (PosEneY > yJUGADOR+6){
     PosEneY = PosEneY - velEne;
+    
   }
   if (PosEneY < yJUGADOR+6){
     PosEneY = PosEneY + velEne;
-    
-    
+   muerdenigger();
+  }
     sigma();
   
-  } 
+  
   
   //JUGADOR
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(1).png?raw=true",xJUGADOR,yJUGADOR,60,60);
@@ -271,7 +276,6 @@ void enemigo(){
     yJUGADOR = 280;
   }
 }
-
 
 
 //CARAMELO
@@ -310,13 +314,15 @@ void PUNTOS(){
 //VICTORIA 
 
 void sigma(){
+  
   if (puntos==20){
     animate(victoria);
   }
 }
 
 void victoria(){
-  image("https://dailygame.at/wp-content/uploads/2020/03/fortnite-victoryroyale.jpg",0,0,325,325);
+  background(0,0,0);
+  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/NIGGA.png?raw=true",0,0,325,325);  
   fill(255,255,255);
   rect(10,10,40,40);
   fill(161,0,255);
@@ -328,13 +334,23 @@ void victoria(){
 }
   
 
-//PARA QUE SE EJECUTE EL GAME OVER
-
-
-
-
-
 //GAME OVER
+
+void muerdenigger(){
+  
+
+  
+  if (PosEneX==xJUGADOR+6){
+    animate(gameover);
+  }
+ 
+
+  if (PosEneY==yJUGADOR+6){
+    animate(gameover);
+}
+  
+}
+
 
 void gameover(){
   image("https://www.funcinema.com.ar/wp-content/uploads/2021/05/GameoverSMB.png",0,0,325,325);
