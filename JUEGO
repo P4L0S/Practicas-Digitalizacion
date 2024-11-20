@@ -240,7 +240,6 @@ void enemigo(){
   }
   if (PosEneY < yJUGADOR+6){
     PosEneY = PosEneY + velEne;
-   muerdenigger();
   }
     sigma();
     muerdenigger();
@@ -336,20 +335,43 @@ void victoria(){
 
 //GAME OVER
 
-void muerdenigger(){
-  
+void muerdenigger() {
+    
+    int distanciaX = PosEneX - xJUGADOR;
+    int distanciaY = PosEneY - yJUGADOR;
+
+   
+    if (abs(distanciaX) > 6) {
+        
+        if (distanciaX > 6) {
+            PosEneX -= velEne;
+        }
+        
+        else {
+            PosEneX += velEne;
+        }
+    }
+
+    if (abs(distanciaY) > 6) {
+        
+        if (distanciaY > 6) {
+            PosEneY -= velEne;
+        }
+       
+        else {
+            PosEneY += velEne;
+        }
+    }
+
+    // Cuando la distancia es lo suficientemente pequeña, se ejecuta la animación de "GAME OVER"
+    if (abs(distanciaX) <= 6 && abs(distanciaY) <= 6) {
+        animate(gameover);
+    }
+}
+
 
   
-  if (PosEneX==xJUGADOR+6){
-    animate(gameover);
-  }
- 
 
-  if (PosEneY==yJUGADOR+6){
-    animate(gameover);
-}
-  
-}
 
 
 void gameover(){
