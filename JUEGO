@@ -316,13 +316,13 @@ void PUNTOS(){
 void sigma(){
   
   if (puntos==10){
+    setup();
     animate(victoria);
   }
 }
 
 void victoria(){
   background(255,255,255);
-  image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixilart-sprite.png?raw=true",90,0,325,325);
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/NIGGA.png?raw=true",90,5,150,150);  
   fill(255,255,255);
   rect(10,10,40,40);
@@ -332,8 +332,43 @@ void victoria(){
   image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Fv%25C3%25ADdeos%2Fgame-over&psig=AOvVaw3kALgizRx58XXjAFT-WWAV&ust=1730981553978000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKC6lbnMwokDFQAAAAAdAAAAABAE",0,0,325,325);
   boton();
   funcionboton();
+  draw();
+  
 }
   
+//MONIGOTE VICTORIA
+
+// Variables de control
+int tiempoInicio;  // tiempo inicial en milisegundos
+boolean mostrarPrimera = true; // Indica si mostrar la primera imagen
+
+void setup() {
+  tiempoInicio = millis(); // Inicializa el tiempo al comienzo
+}
+
+void draw() {
+
+  //tiempo transcurrido
+  int tiempoActual = millis();
+  int tiempoTranscurrido = tiempoActual - tiempoInicio;
+
+  // Cambia el estado si han pasado 5 segundos (5000 milisegundos)
+  if (tiempoTranscurrido >= 1000) {
+    mostrarPrimera = !mostrarPrimera; // Cambia de estado
+    tiempoInicio = millis(); // Reinicia el tiempo
+  }
+
+  // Muestra la imagen correspondiente según el estado
+  if (mostrarPrimera) {
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixilart-sprite%20(1).png?raw=true", 120, 150, 200, 150); // Primera imagen
+  } else {
+    image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixilart-sprite%20(2).png?raw=true",120, 150, 200, 150); // Segunda imagen
+  }
+}
+
+
+
+
 
 //GAME OVER
 
