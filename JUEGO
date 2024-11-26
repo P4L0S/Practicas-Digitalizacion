@@ -41,13 +41,14 @@ puntos=0;
 void play2(){
 puntos=0;
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
- if (keyPressed){println("Nombre del jugador");
-                  name();
-                 animate(ejecutar);}}
+ if (keyPressed){
+   
+   println("Nombre del jugador");
+   name();
+   animate(ejecutar);
+ }
+}
                  
-
-
-
 String nombre;
   int anchoHola = textWidth(" ");
   int anchoEspacio = textWidth(" ");
@@ -206,7 +207,7 @@ void juego(){
 
 int PosEneX = 160;
 int PosEneY = 50;
-int velEneOri = 5;
+int velEneOri = 1;
 int velEne = velEneOri;
 int velEneFre = 2;
 
@@ -226,19 +227,19 @@ void enemigo(){
   image("https://wallpapers.com/images/hd/aesthetic-pixel-art-hd-zx9lnoxvvasrxsw0.jpg",0,0,325,325);
   image("https://github.com/P4L0S/Practicas-Digitalizacion/blob/main/IMAGEN/pixil-frame-0%20(2).png?raw=true",PosEneX,PosEneY,EneX,EneY);
   
-  if (PosEneX > xJUGADOR+6){
+  if (PosEneX > xJUGADOR-10){
     PosEneX = PosEneX - velEne;
    
   }
-  if (PosEneX < xJUGADOR+6){
+  if (PosEneX < xJUGADOR+10){
     PosEneX = PosEneX + velEne;
     
   } 
-  if (PosEneY > yJUGADOR+6){
+  if (PosEneY > yJUGADOR-10){
     PosEneY = PosEneY - velEne;
     
   }
-  if (PosEneY < yJUGADOR+6){
+  if (PosEneY < yJUGADOR+10){
     PosEneY = PosEneY + velEne;
   }
     sigma();
@@ -314,7 +315,7 @@ void PUNTOS(){
 
 void sigma(){
   
-  if (puntos==20){
+  if (puntos==10){
     animate(victoria);
   }
 }
@@ -341,9 +342,9 @@ void muerdenigger() {
     int distanciaY = PosEneY - yJUGADOR;
 
    
-    if (abs(distanciaX) > 6) {
+    if (abs(distanciaX) > 10) {
         
-        if (distanciaX > 6) {
+        if (distanciaX > 10) {
             PosEneX -= velEne;
         }
         
@@ -352,9 +353,9 @@ void muerdenigger() {
         }
     }
 
-    if (abs(distanciaY) > 6) {
+    if (abs(distanciaY) > 10) {
         
-        if (distanciaY > 6) {
+        if (distanciaY > 10) {
             PosEneY -= velEne;
         }
        
@@ -364,7 +365,7 @@ void muerdenigger() {
     }
 
     // Cuando la distancia es lo suficientemente pequeña, se ejecuta la animación de "GAME OVER"
-    if (abs(distanciaX) <= 6 && abs(distanciaY) <= 6) {
+    if (abs(distanciaX) <= 10 && abs(distanciaY) <= 10) {
         animate(gameover);
     }
 }
