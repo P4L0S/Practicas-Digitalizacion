@@ -41,8 +41,7 @@ puntos=0;
 void play2(){
 puntos=0;
  image("https://st3.depositphotos.com/2419757/32425/v/450/depositphotos_324257814-stock-illustration-computer-graphic-of-pixel-game.jpg",0,0,325,325); 
- if (keyPressed){
-   
+ if (keyPressed){   
    println("Nombre del jugador");
    name();
    animate(ejecutar);
@@ -207,7 +206,7 @@ void juego(){
 
 int PosEneX = 160;
 int PosEneY = 50;
-int velEneOri = 1;
+int velEneOri = 2;
 int velEne = velEneOri;
 int velEneFre = 2;
 
@@ -564,7 +563,13 @@ void funcionbotonranking(){
 //LO QUE HACE EL BOTON
 void funcionboton(){
   if (keyPressed){
-    if (key=="Escape"){
-     
-      animate(menuprincipal);}}}
+    if (key=="Escape"){   
+  animate(menuprincipal);
+  x=120;
+  y=120;
+      EneX=40;
+        EneY=40;
+      xJUGADOR=160;
+      yJUGADOR=160;
+    }}}
  
